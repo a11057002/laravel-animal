@@ -9,6 +9,7 @@ class Animal extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'id',
         'type_id',
         'name',
         'birthday',
@@ -16,7 +17,7 @@ class Animal extends Model
         'fix',
         'description',
         'personality',
-        'user_id' // 後續更改
+        'user_id' // 後續更改  身分驗證
     ];
 
 }

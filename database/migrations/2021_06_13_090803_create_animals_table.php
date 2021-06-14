@@ -14,7 +14,8 @@ class CreateAnimalsTable extends Migration
     public function up()
     {
         Schema::create('animals', function (Blueprint $table) {
-            $table->id();
+            $table->string('id')->unique();
+            // $table->primary('id');
             $table->unsignedBigInteger('type_id')->nullable();
             $table->string('name');
             $table->date('birthday')->nullable();
